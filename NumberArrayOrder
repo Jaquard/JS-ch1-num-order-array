@@ -1,0 +1,44 @@
+let ArrayFromAbove=[1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
+
+ArrayFromAbove.sort((a,b)=>a-b);
+
+ let myAnswerArray=[];
+ let smallArray=[];
+
+function answer(Array){
+
+  for(var i=0; i<Array.length; i++){
+   
+    if(Array[i]===Array[i+1]){
+      smallArray.push(Array[i])
+      
+      }else if(Array[i]===Array[i-1]){
+         smallArray.push(Array[i]);
+         myAnswerArray.push(smallArray);
+         smallArray=[];
+
+      }
+
+    else {
+       
+        myAnswerArray.push(Array[i]);
+        
+    }       
+}
+return myAnswerArray;
+}
+answer(ArrayFromAbove);
+
+
+
+
+
+[[1,1,1,1],[2,2,2], 4,5,10,[20,20], 391, 392,591]
+
+
+
+
+
+
+
+
